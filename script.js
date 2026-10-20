@@ -1,6 +1,7 @@
 const container = document.querySelector(".container");
 const body = document.querySelector("body");
 const btn = document.createElement("button");
+const maxNumberOfSquaresPerSide = 100;
 let numberOfSquaresPerSide;
 
 function generateGrid(numOfSquares){
@@ -20,5 +21,5 @@ body.prepend(btn);
 btn.addEventListener("click", (e) => {
     numberOfSquaresPerSide = prompt("Enter number of squares per side: ");
     container.textContent = '';
-    generateGrid(numberOfSquaresPerSide);
+    numberOfSquaresPerSide > maxNumberOfSquaresPerSide ? generateGrid(maxNumberOfSquaresPerSide) : generateGrid(numberOfSquaresPerSide);
 });

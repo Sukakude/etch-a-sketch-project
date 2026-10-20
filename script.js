@@ -4,6 +4,18 @@ const btn = document.createElement("button");
 const maxNumberOfSquaresPerSide = 100;
 let numberOfSquaresPerSide;
 
+function randomNumberGenerator(){
+    return Math.floor(Math.random() * 255)
+}
+
+function generateRGBValues(){
+    let hexValues = [];
+    for(let i = 0; i < 3; i++){
+        hexValue.push(randomNumberGenerator());
+    }
+    return hexValues;
+}
+
 function generateGrid(numOfSquares){
     for(let col = 0; col < numOfSquares; col++){
         for(let row = 0; row < numOfSquares; row++){

@@ -9,6 +9,13 @@ function generateGrid(numOfSquares){
         for(let row = 0; row < numOfSquares; row++){
             const div = document.createElement("div");
             div.classList.add("box");
+            div.addEventListener('mouseenter', (e) => {
+                div.style.backgroundColor = "#FFD700";
+            });
+
+            div.addEventListener('mouseleave', (e) => {
+                div.style.backgroundColor = "black";
+            });
             container.appendChild(div)
         }
     }

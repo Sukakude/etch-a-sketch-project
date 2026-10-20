@@ -11,7 +11,7 @@ function randomNumberGenerator(){
 function generateRGBValues(){
     let hexValues = [];
     for(let i = 0; i < 3; i++){
-        hexValue.push(randomNumberGenerator());
+        hexValues.push(randomNumberGenerator());
     }
     return hexValues;
 }
@@ -22,7 +22,8 @@ function generateGrid(numOfSquares){
             const div = document.createElement("div");
             div.classList.add("box");
             div.addEventListener('mouseenter', (e) => {
-                div.style.backgroundColor = "#FFD700";
+                let hexValues = generateRGBValues();
+                div.style.backgroundColor = `rgb(${hexValues[0]},${hexValues[1]},${hexValues[2]})`;
             });
 
             div.addEventListener('mouseleave', (e) => {
